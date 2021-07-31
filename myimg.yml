@@ -1,11 +1,11 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: my-jenkins
-  spec:
-    containers:
-      name: first-Pod
-      image: nginx
-      ports:
-        containerPort: 8080
+spec:
+  containers:
+  - name: jenkins-container
+    image: jenkins:2.60.3
+    ports:
+    - containerPort: 8080
       
