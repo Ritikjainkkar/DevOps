@@ -5,15 +5,14 @@ metadata:
 spec:
   replicas: 3
   selector:
-    app: myrc
+    app: mynginx
   template:
     metadata:
-      name: myrc
       labels:
-        app: myrc
+        app: mynginx
     spec:
       containers:
-        - name: myrc
+        - name: nginx-container
           image: nginx
           ports:
             - containerPort: 8080
